@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<title>Bubble Sort</title>
+<script src="https://d3js.org/d3.v3.js"></script>
+<meta charset="UTF-8">
+
+<head>
+    <style>
+        /* div {margin-left: 40px;margin-top: 20px} */
+
+        text {
+            fill: black;
+        }
+
+        rect {
+            fill: white;
+        }
+
+        .unsorted {
+            fill: white
+        }
+
+        .sorted {
+            fill: rgb(10, 223, 28);
+        }
+
+        .min {
+            fill: rgb(182, 50, 50);
+            ;
+        }
+
+        .testing {
+            fill: red;
+        }
+    </style>
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="Styling.css">
+
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="menu">
+                <a href="Bubble.html"> Bubble Sort</a>
+                <a href="Insertion.html">Insertion Sort</a>
+                <a href="index.html">Home</a>
+                <a href="About.html">About</a>
+            </div>
+        </div>
+    </nav>
+    <div class="contain">
+        <p>
+        <h2 id="heading">BUBBLE SORT</h2>
+        </p>
+        <input id="array" type="text" placeholder="Enter array seperated by space" size="30">
+        <button id="submit" class="btn-1" onclick="submit()">Submit</button>
+        <div>
+            <div id="buttons">
+                <button class="btn" onclick="bubbleSort()">Bubble Sort</button>
+                <!-- <button class="btn" onclick="reset()">Reset</button> -->
+                <button class="btn" onClick="window.location.reload();">Clear</button>
+            </div>
+            <div class="sh"></div>
+        </div>
+    </div>
+
+</body>
+
+<script src="bubbleSort.js"></script>
+
+</html>

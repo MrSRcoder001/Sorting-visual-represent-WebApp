@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+   <title>Algorithm Visualizer</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+   <head><link rel="stylesheet" href="Styling.css"></head>
+   <body>
+      <nav>
+            <div class="navbar">
+                <div class="menu">
+                   <a href="Bubble.html" > Bubble Sort</a>
+                    <a href="Insertion.html">Insertion Sort</a>
+                    <a href="index.html">Home</a>
+                    <a href="About.html">About</a>
+                </div>
+            </div>
+        </nav>
+      <header >
+         <div class="heading">
+            <br>
+            <h1>Algorithm Visualizer</h1>
+            <h3>Enjoy the new way of studying algorithms</h3>
+         </div>
+      </header>
+      <div >
+      <p style="text-align: center;">Choose from below algorithms to get started</p>
+      <br>
+</div>
+      <div class="sort-techniq">
+         <div class="sort-border">
+            <div class="sort">
+               <h3>Bubble Sort</h3>
+               
+               <img src="image.png" height="200px" width="400px">
+               <p>Large values sorted first</p>
+               <p>A very important concept of algorithm</p>
+               <p>Best time Complexity is O(n)</p>
+               <p>Average and Worst time complexity is O(n²)</p>
+              
+               <p><a href="Bubble.html"><button class="btn-sort">Click Here to Get Started</button></a></p>
+            </div>
+         </div>
+         <div class="sort-border">
+            <div class="sort">
+               <h3>Insertion Sort</h3>
+               <img src="Insertion.png" height="200px" width="400px">
+               <p>Efficient for smaller datasets</p>
+               <p>Effective for partially sorted array</p>
+               <p>Best time Complexity is O(n)</p>
+               <p>Average and Worst time complexity is O(n²)</p>
+               <p><a href="Insertion.html"><button class="btn-sort">Click Here to Get Started</button></a></p>
+            </div>
+         </div>
+      </div>
+      <br>
+      <br>
+      <!-- Footer -->
+    
+      <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+      <script>
+         // Side navigation
+         function w3_open() {
+           var x = document.getElementById("mySidebar");
+           x.style.width = "100%";
+           x.style.fontSize = "40px";
+           x.style.paddingTop = "10%";
+           x.style.display = "block";
+         }
+         function w3_close() {
+           document.getElementById("mySidebar").style.display = "none";
+         }
+         
+         // Tabs
+         function openCity(evt, cityName) {
+           var i;
+           var x = document.getElementsByClassName("city");
+           for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";
+           }
+           var activebtn = document.getElementsByClassName("testbtn");
+           for (i = 0; i < x.length; i++) {
+             activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+           }
+           document.getElementById(cityName).style.display = "block";
+           evt.currentTarget.className += " w3-dark-grey";
+         }
+         
+         var mybtn = document.getElementsByClassName("testbtn")[0];
+         mybtn.click();
+         
+         // Accordions
+         function myAccFunc(id) {
+           var x = document.getElementById(id);
+           if (x.className.indexOf("w3-show") == -1) {
+             x.className += " w3-show";
+           } else { 
+             x.className = x.className.replace(" w3-show", "");
+           }
+         }
+         
+         // Slideshows
+         var slideIndex = 1;
+         
+         function plusDivs(n) {
+           slideIndex = slideIndex + n;
+           showDivs(slideIndex);
+         }
+         
+         function showDivs(n) {
+           var x = document.getElementsByClassName("mySlides");
+           if (n > x.length) {slideIndex = 1}    
+           if (n < 1) {slideIndex = x.length} ;
+           for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";  
+           }
+           x[slideIndex-1].style.display = "block";  
+         }
+         
+         showDivs(1);
+         
+         // Progress Bars
+         function move() {
+           var elem = document.getElementById("myBar");   
+           var width = 5;
+           var id = setInterval(frame, 10);
+           function frame() {
+             if (width == 100) {
+               clearInterval(id);
+             } else {
+               width++; 
+               elem.style.width = width + '%'; 
+               elem.innerHTML = width * 1  + '%';
+             }
+           }
+         }
+      </script>
+   </body>
+</html>
